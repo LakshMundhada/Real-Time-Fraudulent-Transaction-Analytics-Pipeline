@@ -20,9 +20,10 @@ To streamline the workflow and ensure reproducibility, the entire pipeline is au
 - **Streaming Data**: Streamed through Confluent Kafka, representing real-time credit card transactions.
 
 ### Technologies Used
+- **AWS RDS**: Database for storing unique customer information securely.
 - **Apache Spark**: Processes and analyzes streaming and historical transaction data.
 - **AWS S3**: Stores analyzed data and serves as a data source for AWS Glue.
-- **AWS Glue**: Used for crawling data, cataloging schemas, and preparing data for analysis.
+- **AWS Crawler**: Used for crawling data, cataloguing schemas, and preparing data for analysis.
 - **Athena**: Enables ad-hoc querying of data stored in S3 via the Glue Data Catalog.
 - **Tableau**: Visualizes insights derived from the analyzed data, facilitating interactive exploration.
 - **AWS CloudFormation**: Automates the deployment and management of AWS resources.
@@ -33,7 +34,7 @@ To streamline the workflow and ensure reproducibility, the entire pipeline is au
 1. **Data Ingestion**: Historical transactional data is fetched from S3, while real-time transaction streams are obtained from Confluent Kafka.
 2. **Data Processing**: Apache Spark applies predefined rules to analyze the streaming data against historical transactions.
 3. **Data Storage**: Analyzed data, including both genuine and fraudulent transactions, is stored in an AWS S3 bucket.
-4. **Schema Management**: AWS Glue crawls the data, cataloging schemas and making them available in the Glue Data Catalog.
+4. **Schema Management**: AWS Glue crawls the data, cataloguing schemas and making them available in the Glue Data Catalog.
 5. **Ad-Hoc Queries**: Athena allows users to run ad-hoc queries against the data stored in S3, leveraging the Glue Data Catalog for schema information.
 6. **Visualization**: Tableau connects to Athena using the ODBC Athena connector, enabling real-time visualization of transactional insights.
 7. **Automation and Deployment**: The entire pipeline, including infrastructure provisioning and deployment, is automated using AWS CloudFormation and GitActions.
