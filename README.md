@@ -2,7 +2,16 @@
 
 ## Overview
 
-The Real Time Credit Card Fraud Transaction Analytics Pipeline is a comprehensive solution designed to detect fraudulent transactions in real-time by analyzing both historical and streaming transaction data. This project utilizes various AWS services and open-source technologies to process, analyze, visualize, and monitor credit card transactions efficiently.
+The Real Time Credit Card Fraud Transaction Analytics Pipeline is a comprehensive solution designed to detect real-time fraudulent transactions by analysing historical and streaming transaction data. This project utilizes various AWS services and open-source technologies to efficiently process, analyze, visualize, and monitor credit card transactions.
+
+## Description
+
+This project integrates historical data stored in Amazon S3 with streaming data sourced from Confluent Kafka using Apache Spark. Leveraging Spark's powerful processing capabilities, the system applies predefined conditions to distinguish between fraudulent and genuine transactions in real time. The processed data is then written back to S3 for storage.
+
+To enable seamless data exploration and visualization, the project utilizes AWS Athena for SQL-based queries on the stored data. Furthermore, the insights gained from the processed data are visualized using Tableau, and connected to the data source through a specialized connector.
+
+To streamline the workflow and ensure reproducibility, the entire pipeline is automated using GitHub Actions, with infrastructure provisioning handled by CloudFormation templates (CFT). This end-to-end solution offers a robust, scalable, and automated framework for real-time fraud detection and actionable insights, enhancing decision-making processes.
+
 
 ## Key Components
 
