@@ -38,6 +38,9 @@ To streamline the workflow and ensure reproducibility, the entire pipeline is au
 6. **Visualization**: Tableau connects to Athena using the ODBC Athena connector, enabling real-time visualization of transactional insights.
 7. **Automation and Deployment**: The entire pipeline, including infrastructure provisioning and deployment, is automated using AWS CloudFormation and GitActions.
 
+# Architecture
+![Architecture Diagram](https://github.com/LakshMundhada/Real-Time-Fraudulent-Transaction-Analytics-Pipeline/assets/150781667/a0357a50-42e4-4a2f-96b9-006df45aae39)
+
 # Deployment Steps
 
 Set up IAM roles with appropriate permissions for accessing AWS services like S3, Glue, Athena, and CloudFormation.
