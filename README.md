@@ -28,7 +28,6 @@ The Real Time Credit Card Fraud Transaction Analytics Pipeline is a comprehensiv
 5. **Ad-Hoc Queries**: Athena allows users to run ad-hoc queries against the data stored in S3, leveraging the Glue Data Catalog for schema information.
 6. **Visualization**: Tableau connects to Athena using the ODBC Athena connector, enabling real-time visualization of transactional insights.
 7. **Automation and Deployment**: The entire pipeline, including infrastructure provisioning and deployment, is automated using AWS CloudFormation and GitActions.
-8. 
 
 # Deployment Steps
 
