@@ -79,16 +79,6 @@ Set up IAM roles with appropriate permissions for accessing AWS services like S3
 - Monitor the pipeline for performance, scalability, and accuracy of fraud detection.
 - Implement monitoring and logging mechanisms to track pipeline health and performance metrics.
 
-## Step 7: Document Deployment Process
-
-- Document deployment steps, configuration details, and troubleshooting procedures.
-- Create a README file or documentation to guide users on how to deploy, configure, and use the pipeline.
-
-## Step 8: Training and Support
-
-- Provide training sessions for users on how to use the pipeline and interpret the insights generated.
-- Offer ongoing support and maintenance for the pipeline, addressing any issues or enhancements as needed.
-
 ## Conclusion
 
 The Real Time Credit Card Fraud Transaction Analytics Pipeline provides a scalable, efficient, and automated solution for detecting fraudulent transactions in real-time. By leveraging the power of AWS services and open-source technologies, the pipeline offers robust data processing, analysis, visualization, and monitoring capabilities, empowering organizations to safeguard against financial fraud effectively.
