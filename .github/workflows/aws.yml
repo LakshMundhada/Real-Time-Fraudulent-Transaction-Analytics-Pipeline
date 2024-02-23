@@ -16,7 +16,7 @@ jobs:
         run: |
           aws cloudformation deploy \
             --stack-name MyEMRStack \
-            --template-file .github/workflows/Mycft2.yaml \
+            --template-file .github/workflows/MYcft2.yaml \
             --capabilities CAPABILITY_IAM
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
