@@ -22,6 +22,7 @@ To streamline the workflow and ensure reproducibility, the entire pipeline is au
 ### Technologies Used
 - **AWS RDS**: Database for storing unique customer information securely.
 - **Apache Spark**: Processes and analyzes streaming and historical transaction data.
+- **AWS EMR (Elastic MapReduce)**: Provides a managed big data framework for processing and analyzing large datasets in parallel.
 - **AWS S3**: Stores analyzed data and serves as a data source for AWS Glue.
 - **AWS Crawler**: Used for crawling data, cataloguing schemas, and preparing data for analysis.
 - **Athena**: Enables ad-hoc querying of data stored in S3 via the Glue Data Catalog.
