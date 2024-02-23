@@ -34,10 +34,12 @@ Resources:
           - --deploy-mode
           - cluster
           - --class
-          - org.apache.spark.deploy.Mysparkob
+          - org.apache.spark.deploy.Mysparkob 
           - --packages
-          - org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1
-          - s3://requiredfiles2323/a.py
+          - org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1 
+          - --jars
+          - s3://requiredfiles2323/mysql-connector-java-8.0.23.jar 
+          - s3://requiredfiles2323/ab.py
       JobFlowId: !Ref MyEMRCluster
 
   DataCrawler:
