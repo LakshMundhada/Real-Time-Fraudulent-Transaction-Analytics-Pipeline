@@ -1,0 +1,56 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  MyEMRCluster:
+    Type: AWS::EMR::Cluster
+    Properties:
+      Name: MyEMRCluster
+      ReleaseLabel: emr-7.0.0
+      Applications:
+        - Name: Spark
+      Instances:
+        MasterInstanceGroup:
+          InstanceCount: 1  
+          InstanceType: m5.xlarge
+          Name: MASTER
+        CoreInstanceGroup: 
+          InstanceCount: 2
+          InstanceType: m5.xlarge
+          Name: CORE
+        Ec2SubnetIds: 
+          - subnet-01b68b68cd8eb4f82
+        Ec2KeyName: onekey
+      JobFlowRole: "EMR_EC2_DefaultRole"
+      ServiceRole: "EMR_DefaultRole"
+          
+  MySparkStep:
+    Type: AWS::EMR::Step
+    Properties:
+      Name: MySparkStep
+      ActionOnFailure: CONTINUE
+      HadoopJarStep:
+        Jar: command-runner.jar
+        Args:
+          - spark-submit
+          - --deploy-mode
+          - cluster
+          - --class
+          - org.apache.spark.deploy.Mysparkob 
+          - --packages
+          - org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1 
+          - --jars
+          - s3://requiredfiles2323/mysql-connector-java-8.0.23.jar 
+          - s3://requiredfiles2323/ab.py
+      JobFlowId: !Ref MyEMRCluster
+
+  DataCrawler:
+    Type: AWS::Glue::Crawler
+    DependsOn:
+      - MyEMRCluster
+      - MySparkStep
+    Properties:
+      Name: data-crawler
+      DatabaseName: default
+      Targets:
+        S3Targets:
+          - Path: s3://athenabucket-231/final.parquet
+      Role: arn:aws:iam::963746058908:role/LabRole
