@@ -95,6 +95,6 @@ The Real-Time Credit Card Fraud Transaction Analytics Pipeline provides a scalab
 
 ## Final Single Dashboard:
 
-![Finale Dashboard](https://github.com/LakshMundhada/Real-Time-Fraudulent-Transaction-Analytics-Pipeline/assets/150781667/0cbbbf84-79a9-453a-b265-2f7ad2791ea4)
+![Finale Dashboard](https://github.com/LakshMundhada/Real-Time-Fraudulent-Transaction-Analytics-Pipeline/assets/150781667/fbd9ca04-a3f1-4583-aa97-423063f4dbe9)
 
 
